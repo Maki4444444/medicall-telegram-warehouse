@@ -7,10 +7,13 @@ psycopg2-binary==2.9.9
 sqlalchemy==2.0.30
 
 # dbt
+dbt-core==1.8.0
 dbt-postgres==1.8.0
 
 # YOLO (Task 3)
-ultralytics==8.2.0
+ultralytics>=8.3.0
+torch==2.5.1
+torchvision==0.20.1
 
 # API (Task 4)
 fastapi==0.111.0

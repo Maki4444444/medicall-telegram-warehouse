@@ -81,3 +81,24 @@ models:
         description: "Number of forwards of the message."
       - name: has_image
         description: "True if the message included a downloaded image."
+  - name: fct_image_detections
+    description: "One row per YOLO detection joined to fct_messages for channel/date context."
+    columns:
+      - name: message_id
+        description: "FK to fct_messages.message_id."
+        tests:
+          - not_null
+      - name: channel_key
+        description: "FK to dim_channels.channel_key."
+        tests:
+          - not_null
+      - name: date_key
+        description: "FK to dim_dates.date_key."
+        tests:
+          - not_null
+      - name: detected_class
+        description: "YOLOv8 COCO class name detected (null if nothing above threshold)."
+      - name: confidence_score
+        description: "Detection confidence score between 0 and 1."
+      - name: image_category
+        description: "promotional, product_display, lifestyle, or other."
