@@ -17,8 +17,9 @@ torchvision==0.20.1
 
 # API (Task 4)
 fastapi==0.111.0
-uvicorn==0.29.0
+uvicorn==0.30.0
 pydantic==2.7.0
+sqlalchemy==2.0.30
 
 # Orchestration (Task 5)
 dagster==1.7.0
