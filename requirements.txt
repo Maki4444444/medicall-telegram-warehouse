@@ -1,0 +1,26 @@
+# Telegram scraping
+telethon==1.36.0
+python-dotenv==1.0.0
+
+# Database
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.30
+
+# dbt
+dbt-postgres==1.8.0
+
+# YOLO (Task 3)
+ultralytics==8.2.0
+
+# API (Task 4)
+fastapi==0.111.0
+uvicorn==0.29.0
+pydantic==2.7.0
+
+# Orchestration (Task 5)
+dagster==1.7.0
+dagster-webserver==1.7.0
+
+# Utilities
+pandas==2.2.2
+python-dateutil==2.9.0
