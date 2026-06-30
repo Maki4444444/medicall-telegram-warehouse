@@ -40,3 +40,8 @@ Thumbs.db
 # Telegram session file
 session/
 *.session
+*.session-journal
+*.session
+yolov8n.pt
+tmpn5ihe318/
+tmp*/

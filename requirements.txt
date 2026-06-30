@@ -22,8 +22,8 @@ pydantic==2.7.0
 sqlalchemy==2.0.30
 
 # Orchestration (Task 5)
-dagster==1.7.0
-dagster-webserver==1.7.0
+dagster==1.9.0
+dagster-webserver==1.9.0
 
 # Utilities
 pandas==2.2.2
