@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: "Raw Telegram data loaded directly from the data lake JSON files."
+    tables:
+      - name: telegram_messages
+        description: "One row per scraped Telegram message, as loaded by src/load_to_postgres.py."
+        columns:
+          - name: message_id
+            description: "Telegram's internal message id, unique within a channel."
+          - name: channel
+            description: "Source channel username."
+          - name: date
+            description: "Original message timestamp from Telegram."
+          - name: text
+            description: "Raw message text content."
+          - name: views
+            description: "View count at time of scrape."
+          - name: forwards
+            description: "Forward count at time of scrape."
+          - name: media
+            description: "JSON blob describing media attached to the message, if any."
+          - name: image_path
+            description: "Local path to the downloaded image, if the message contained a photo."

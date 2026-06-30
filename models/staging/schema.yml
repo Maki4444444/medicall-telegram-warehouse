@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_telegram_messages
+    description: "Cleaned, type-cast, deduplicated view of raw Telegram messages, one row per message."
+    columns:
+      - name: message_id
+        description: "Unique Telegram message id."
+        tests:
+          - not_null
+      - name: channel_name
+        description: "Source channel username."
+        tests:
+          - not_null
+      - name: message_date
+        description: "Timestamp the message was posted."
+      - name: message_text
+        description: "Cleaned message text, never null or empty after filtering."
+      - name: view_count
+        description: "Number of views, defaults to 0 if missing."
+      - name: forward_count
+        description: "Number of forwards, defaults to 0 if missing."
+      - name: message_length
+        description: "Character length of message_text."
+      - name: has_image
+        description: "True if the message had an associated downloaded image."
